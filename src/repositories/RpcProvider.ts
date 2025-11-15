@@ -261,7 +261,7 @@ export interface ProvidersWithUrls extends Providers {
 let initializeProvidersQueue: WaitingQueue<ProvidersWithUrls> | null = null
 // let providers: ProvidersWithUrls | undefined = undefined
 
-export const initializeProviders = async () => {
+export const initializeProviders = async (): Promise<ProvidersWithUrls> => {
   if (initializeProvidersQueue) {
     const timeoutPromise = new Promise<never>((_, reject) =>
       setTimeout(() => reject(new Error('RPC timeout')), 10000),
