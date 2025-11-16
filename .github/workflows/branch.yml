@@ -5,7 +5,7 @@ on:
     branches:
       - master
       - preprod
-      - develop
+      - develop-local
 
 jobs:
   validate:

@@ -3,7 +3,7 @@ name: Test merge requests
 on:
   pull_request:
     branches:
-      - develop
+      - develop-local
 
 jobs:
   validate:

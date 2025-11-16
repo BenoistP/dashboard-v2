@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Check if the source branch is develop
         run: |
-          if [ "${{ github.event.pull_request.head.ref }}" != "develop" ]; then
-            echo "Pull requests to preprod must come from develop branch."
+          if [ "${{ github.event.pull_request.head.ref }}" != "develop-local" ]; then
+            echo "Pull requests to preprod must come from develop-local branch."
             exit 1
           fi
